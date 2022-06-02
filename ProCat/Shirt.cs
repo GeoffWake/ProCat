@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace ProCat
 {
-    internal class Shirt: Products
+    public class Shirt: Products
     {
         public int Size { get; set; }
 
+        
         public Shirt ( string style, double price, int size)
         {
             Price = price;

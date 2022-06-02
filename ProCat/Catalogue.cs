@@ -8,16 +8,16 @@ namespace ProCat
 {
     internal class Catalogue<T> where T : Products
     {
-        public List<T> _catalogue = new List<T>();
+        public List<T> catalogue = new List<T>();
         public void Add(T product)
         {
-            _catalogue.Add(product);
+            catalogue.Add(product);
         }
 
         public double CalculateTotal()
         {
             double Total = 0;
-            foreach (Products item in _catalogue)
+            foreach (Products item in catalogue)
             {
                 Total += item.CalculateTax();
             }
@@ -25,7 +25,16 @@ namespace ProCat
             return Total;
         }
 
-        
 
+     
+        public void View(IEnumerable<T> catalogue)
+        {
+            foreach (Products product in catalogue)
+            {
+                Console.WriteLine(product);    
+            }
+        }
     }
+
+
 }
