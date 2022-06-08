@@ -18,8 +18,13 @@ namespace ProCat
        //Price with a 10% Mark-Up
         public virtual double CalculateTax()
         {
-            return Price + (Price * 10 / 100);
+            return  (Price * 10 / 100);
 
         }
+
     }
 }
+
+
+
+                

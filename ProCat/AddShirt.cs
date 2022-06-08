@@ -10,15 +10,15 @@ namespace ProCat
 {
     public class AddShirt
     {
+        public static Shirt shirt5;
 
-      
-        public static void CreateShirt()
+        public static Shirt CreateShirt()
         {
 
             Catalogue<Shirt> ShirtCatalogue = new Catalogue<Shirt>();
 
 
-            double price = 0;
+            int price = 0;
             int size = 0;
             string style = "";
 
@@ -41,32 +41,27 @@ namespace ProCat
                 ///Add to List
                 Shirt shirt5 = new Shirt(style, price, size);
                 ShirtCatalogue.catalogue.Add(shirt5);
-               
-                
 
-                // string addList = JsonSerializer.Serialize(shirt5) ;
-                string addList = JsonSerializer.Serialize(ShirtCatalogue.catalogue); //+ Environment.NewLine;///New line
 
-                string filePath = Path.Combine(Directory.GetCurrentDirectory(), "catalogue.json");
-                File.AppendAllText(filePath, addList);
+
+
 
 
 
 
                 Console.WriteLine("Would you like to add another item? Y/N");
-                answer = Console.ReadLine();
+            answer = Console.ReadLine();
 
-                if (answer != "Y")
-                {
-                     Menu.MainMenu();
-                }
-
-
-                
-
+            if (answer != "Y")
+            {
+                Menu.MainMenu();
             }
 
-          
+                
+            }
+            return shirt5;
+
+
 
 
 

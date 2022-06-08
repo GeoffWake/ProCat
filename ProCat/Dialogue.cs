@@ -11,3 +11,17 @@ namespace ProCat
         
     }
 }
+
+
+
+
+///Serialisation
+/* string addList = JsonSerializer.Serialize(shirt5) ;
+string addList = JsonSerializer.Serialize(ShirtCatalogue.catalogue); //+ Environment.NewLine;///New line
+
+string filePath = Path.Combine(Directory.GetCurrentDirectory(), "catalogue.json");
+File.AppendAllText(filePath, addList);
+*/
+
+
+

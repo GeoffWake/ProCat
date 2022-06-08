@@ -14,27 +14,45 @@ namespace ProCat
             catalogue.Add(product);
         }
 
-        public double CalculateTotal()
+
+        public void Remove(T product)
+        {
+            catalogue.Remove(product);
+        }
+
+        public void CalculateTotal()
         {
             double Total = 0;
             foreach (Products item in catalogue)
             {
                 Total += item.CalculateTax();
+                Console.WriteLine($"Total Tax: {Total}");
+                
             }
 
-            return Total;
         }
 
 
-     
-        public void View(IEnumerable<T> catalogue)
-        {
-            foreach (Products product in catalogue)
-            {
-                Console.WriteLine(product);    
-            }
-        }
+          public void View()
+          { int index = 0;
+
+            string style;
+            int price;
+            int size;
+            foreach ( Products product in catalogue)
+             {
+
+                index++;
+                 Console.WriteLine($"{index}{product.ToString()}");
+                
+
+
+                
+              }
+          }
+
+
     }
-
+    
 
 }
